@@ -1,0 +1,285 @@
+/* Reset */
+body, h1, p, form, input, button, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background Gradient */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(120deg, #1d1f21 0%, #313638 100%);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Container Styling */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    padding: 40px 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    animation: fadeIn 1.2s ease-out;
+}
+
+/* Header Styling */
+.container h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff; /* ใช้สีขาวอย่างเดียว */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Notification */
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 18px 35px;
+    border-radius: 12px;
+    font-size: 1.1em;
+    font-weight: bold;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+    animation: slideInTop 0.8s ease-out, fadeOut 3s forwards;
+    z-index: 999;
+    max-width: 80%;
+    word-wrap: break-word;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+@keyframes slideInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade-out animation */
+@keyframes fadeOut {
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+/* Success notification */
+.notification-success {
+    background: #4caf50;
+    border-left: 6px solid #2e7d32;
+    box-shadow: 0px 4px 15px rgba(76, 175, 80, 0.6);
+}
+
+/* Error notification */
+.notification-error {
+    background: #f44336;
+    border-left: 6px solid #d32f2f;
+    box-shadow: 0px 4px 15px rgba(244, 67, 54, 0.6);
+}
+
+
+
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #f0f0f0;
+    text-align: left;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 1.1em;
+    color: #fff;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    outline: none;
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.5);
+    border-color: #ff595e;
+}
+
+/* Button Styling */
+button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #ff595e, #0f4b66);
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+button:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(45deg, #0f4b66, #ff595e);
+}
+
+/* Email Items */
+.email-item {
+    margin-bottom: 25px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.8s ease-out;
+}
+
+.email-header {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ff595e;
+}
+
+.email-date {
+    font-size: 1em;
+    color: #e0e0e0;
+}
+
+.email-body {
+    margin-top: 10px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textGradient {
+    0% {
+        background: -webkit-linear-gradient(45deg, #ff595e, #0f4b66);
+    }
+    100% {
+        background: -webkit-linear-gradient(45deg, #0f4b66, #ff595e);
+    }
+}
+
+/* Error Styling */
+.error {
+    color: #ff6b6b;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Success Message Styling */
+.success {
+    color: #34e89e;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Notification */
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    animation: slideInTop 1s ease-out;
+    z-index: 999;
+}
+
+@keyframes slideInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    .email-item {
+        padding: 18px;
+    }
+}
